@@ -35,8 +35,14 @@ function addCandidatesToTable(table, candidates) {
 }
 
 function filterCandidateBySkill(candidates, skill) {
-  // INSERT YOUR LOGIC HERE   <-------------------------
-  return candidates;
+  console.log({ candidates }, { skill });
+  // Iterate over candidates array and return candidates with javascript skill
+  // Using includes will check every element of an  array and return the once that are meeting the condition.
+
+  const filterBySkill = candidates.filter(candidate =>
+    candidate.skills.includes(skill)
+  );
+  return filterBySkill;
 }
 
 const candidatesTable = document.getElementById("candidates_example");
