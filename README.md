@@ -24,7 +24,7 @@ the structure of the application should look like and focus on the functionaliti
 
 
 ### Application architecture
-######The tool consist of three file 
+###### The tool consist of three file 
    `index.html` contains the markup, style tags and the script tag.
    `index.css`  contains all the styles.
    `index.js`  contains all the script that makes the magic.
