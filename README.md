@@ -26,9 +26,16 @@ the structure of the application should look like and focus on the functionaliti
 ### Application architecture
 ###### The tool consist of three file 
    `index.html` contains the markup, style tags and the script tag.
+
+
    `index.css`  contains all the styles.
+
+
    `index.js`  contains all the script that makes the magic.
+
  The tool shows Candidates with common skill set in a table represented by the candidate name and skills owned in a comma separated format.
+
+ 
 ### Future improvements
 Add Webpack to bundle all the files and configure Hot Module Replacement(HMR)
 Improve UI for better user experience.
