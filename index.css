@@ -1,6 +1,6 @@
 html, body {
     width: 100%;
-    background-color: rgba(97, 84, 47, 0.301);
+    background-color: rgba(47, 95, 97, 0.301);
     display: grid;
   }
   .container {
@@ -12,13 +12,11 @@ html, body {
 
   }
   .header {
-    /* padding-left: 10%; */
     text-align: center;
   }
 .candidates {
   font-size: 12px;
   background: #fff;
-  /* margin: 45px; */
   width: 480px;
   border-collapse: collapse;
   text-align: left;
@@ -39,7 +37,7 @@ html, body {
 }
 
 .candidates tbody tr:hover td {
-    color: rgb(22, 153, 170);
+    color: rgba(170, 39, 22, 0.883);
 }
 
   th,
