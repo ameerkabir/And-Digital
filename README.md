@@ -35,11 +35,17 @@ the structure of the application should look like and focus on the functionaliti
 
  The tool shows Candidates with common skill set in a table represented by the candidate name and skills owned in a comma separated format.
 
- 
+
 ### Future improvements
-Add Webpack to bundle all the files and configure Hot Module Replacement(HMR)
+Add Webpack to bundle all the files and configure Hot Module Replacement(HMR).
+
+
 Improve UI for better user experience.
+
+
 Add unit test aiming for maximum coverage.
+
+
 Making it as accessible as possible.
 
 ## Licence
