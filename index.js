@@ -35,11 +35,10 @@ function addCandidatesToTable(table, candidates) {
 }
 
 function filterCandidateBySkill(candidates, skill) {
-  console.log({ candidates }, { skill });
   // Iterate over candidates array and return candidates with specific skill
 
   const filterBySkill = candidates.filter(candidate =>
-    // Using includes will check every element of an  array and return the once that are meeting the condition.
+    // The include method will determines whether a candidate has a particular skill or not.
     candidate.skills.includes(skill)
   );
   return filterBySkill;
