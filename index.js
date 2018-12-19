@@ -37,9 +37,9 @@ function addCandidatesToTable(table, candidates) {
 function filterCandidateBySkill(candidates, skill) {
   console.log({ candidates }, { skill });
   // Iterate over candidates array and return candidates with javascript skill
-  // Using includes will check every element of an  array and return the once that are meeting the condition.
 
   const filterBySkill = candidates.filter(candidate =>
+    // Using includes will check every element of an  array and return the once that are meeting the condition.
     candidate.skills.includes(skill)
   );
   return filterBySkill;
@@ -47,11 +47,20 @@ function filterCandidateBySkill(candidates, skill) {
 
 const candidatesTable = document.getElementById("candidates_example");
 const newCandidatesTable = candidatesTable.cloneNode(true);
+const withPythonSkill = candidatesTable.cloneNode(true);
 
 removeRowsFromTable(newCandidatesTable);
+removeRowsFromTable(withPythonSkill);
 const newTbody = newCandidatesTable.getElementsByTagName("tbody")[0];
+const pythonTable = withPythonSkill.getElementsByTagName("tbody")[0];
 
 const filteredCandidates = filterCandidateBySkill(newCandidates, "JavaScript");
+const candidateWithPythonSkill = filterCandidateBySkill(
+  newCandidates,
+  "Python"
+);
 addCandidatesToTable(newTbody, filteredCandidates);
+addCandidatesToTable(pythonTable, candidateWithPythonSkill);
 
 document.body.appendChild(newCandidatesTable);
+document.body.appendChild(withPythonSkill);
