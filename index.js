@@ -48,19 +48,27 @@ function filterCandidateBySkill(candidates, skill) {
 const candidatesTable = document.getElementById("candidates_example");
 const newCandidatesTable = candidatesTable.cloneNode(true);
 const withPythonSkill = candidatesTable.cloneNode(true);
+const withAwsSkill = candidatesTable.cloneNode(true);
 
 removeRowsFromTable(newCandidatesTable);
 removeRowsFromTable(withPythonSkill);
+removeRowsFromTable(withAwsSkill);
+
 const newTbody = newCandidatesTable.getElementsByTagName("tbody")[0];
 const pythonTable = withPythonSkill.getElementsByTagName("tbody")[0];
+const AwsTable = withAwsSkill.getElementsByTagName("tbody")[0];
 
 const filteredCandidates = filterCandidateBySkill(newCandidates, "JavaScript");
 const candidateWithPythonSkill = filterCandidateBySkill(
   newCandidates,
   "Python"
 );
+const candidateWithAwsSkill = filterCandidateBySkill(newCandidates, "AWS");
+
 addCandidatesToTable(newTbody, filteredCandidates);
 addCandidatesToTable(pythonTable, candidateWithPythonSkill);
+addCandidatesToTable(AwsTable, candidateWithAwsSkill);
 
 document.body.appendChild(newCandidatesTable);
 document.body.appendChild(withPythonSkill);
+document.body.appendChild(withAwsSkill);
