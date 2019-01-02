@@ -1,0 +1,33 @@
+{
+  "name": "ameer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "test": "yarn jest",
+    "lint": "eslint src",
+    "start": "rm -rf dist && yarn build && webpack-dev-server --mode development --open"
+  },
+  "browser": {
+    "fs": "level-fs",
+    "./lib/ops.js": "./browser/opts.js"
+  },
+  "devDependencies": {
+    "babel-loader": "^8.0.4",
+    "jest": "^23.6.0",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.0.0",
+    "@babel/preset-env": "^7.2.3",
+    "babel-eslint": "^10.0.1",
+    "browserify": "^16.2.3",
+    "eslint": "^5.10.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
+}
